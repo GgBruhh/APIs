@@ -17,12 +17,9 @@ async function getGif(){
     display.append(newGif);
     newGif.src = res.data.data[randomIdx].images.original.url;
     queryInput.value = '';
-
-    removeButton()
 }
 
-
-function removeButton(){
+    //creating remove button and giving it functionality
     const newBtn = document.createElement('button');
     newBtn.classList.add('remove')
     newBtn.innerText = 'Remove'
@@ -30,9 +27,8 @@ function removeButton(){
 
 
     newBtn.addEventListener('click', function(){
-        display.innerHTML = ''
+        display.innerHTML = ''; 
     })
-}
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
