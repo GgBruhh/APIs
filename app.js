@@ -1,6 +1,7 @@
 const queryInput = document.getElementById('search');
 const form = document.querySelector('form');
 const display = document.getElementById('gif-display');
+const submitButton = document.getElementById('submit');
 
 async function getGif(){
     //requesting data based on input
@@ -19,7 +20,7 @@ async function getGif(){
     queryInput.value = '';
 }
 
-    //creating remove button and giving it functionality
+
     const newBtn = document.createElement('button');
     newBtn.classList.add('remove')
     newBtn.innerText = 'Remove'
@@ -30,7 +31,7 @@ async function getGif(){
         display.innerHTML = ''; 
     })
 
-form.addEventListener('submit', function(e){
+submitButton.addEventListener('click', function(e){
     e.preventDefault();
     getGif()
 })
